@@ -1,0 +1,34 @@
+{
+  "name": "@kudzaimukungurutse/create-mice-app",
+  "version": "1.0.0",
+  "description": "Create mice.js apps with one command",
+  "bin": {
+    "create-mice-app": "bin/create-mice-app.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "examples"
+  ],
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mice",
+    "framework",
+    "create-app",
+    "vite",
+    "template"
+  ],
+  "author": "Kudzaishe Mukungurutse",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kudzaimukungurutse/create-mice-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kudzaimukungurutse/create-mice-app/issues"
+  },
+  "homepage": "https://github.com/kudzaimukungurutse/create-mice-app#readme"
+}
