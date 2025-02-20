@@ -37,7 +37,7 @@ for (const dir of dirs) {
 
 // Template files with actual content
 const defaultTemplates = {
-    'components/navbar.html': `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    'src/components/navbar.html': `<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="/">My App</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -59,7 +59,7 @@ const defaultTemplates = {
     </div>
 </nav>`,
 
-    'components/footer.html': `<footer class="bg-dark text-light py-4 mt-auto">
+    'src/components/footer.html': `<footer class="bg-dark text-light py-4 mt-auto">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -73,17 +73,17 @@ const defaultTemplates = {
     </div>
 </footer>`,
 
-    'pages/home.html': `<div class="container mt-4">
+    'src/pages/home.html': `<div class="container mt-4">
         <h1>Welcome to Mice.js</h1>
         <p>Start building your app!</p>
     </div>`,
 
-    'pages/about.html': `<div class="container mt-4">
+    'src/pages/about.html': `<div class="container mt-4">
         <h1>About Us</h1>
         <p>This is the about page.</p>
     </div>`,
 
-    'pages/contact.html': `<div class="container mt-4">
+    'src/pages/contact.html': `<div class="container mt-4">
         <h1>Contact Us</h1>
         <p>Get in touch with us.</p>
     </div>`,
@@ -109,7 +109,7 @@ const defaultTemplates = {
 </body>
 </html>`,
 
-    'src/main.js': `import { Router } from '@kudzaimukungurutse/mice-core';
+    'src/main.js': `import { Router } from '@micejs/core';
 
 // Initialize the router
 const router = new Router();
@@ -126,7 +126,7 @@ router.loadPage();`,
             "preview": "vite preview"
         },
         dependencies: {
-            "@kudzaimukungurutse/mice-core": "^1.0.0"
+            "@micejs/core": "^1.0.0"
         },
         devDependencies: {
             "vite": "^5.0.0"
@@ -222,11 +222,8 @@ const templates = templateType === 'react' ? reactTemplates : defaultTemplates;
 console.log('Writing files...');
 for (const [file, content] of Object.entries(templates)) {
     const filePath = join(projectPath, file);
-    if (typeof content === 'object') {
-        await fs.writeFile(filePath, JSON.stringify(content, null, 2));
-    } else {
-        await fs.writeFile(filePath, content);
-    }
+    await fs.mkdir(dirname(filePath), { recursive: true });
+    await fs.writeFile(filePath, content);
 }
 
 // Initialize npm and install dependencies
