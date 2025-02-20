@@ -126,7 +126,7 @@ router.loadPage();`,
             "preview": "vite preview"
         },
         dependencies: {
-            "@micejs/core": "^1.0.0"
+            "@micejs/core": "^1.0.2"
         },
         devDependencies: {
             "vite": "^5.0.0"

@@ -31,14 +31,16 @@ pnpm create mice-app my-app
 ```
 my-app/
 ├── src/
-│   ├── components/     # Reusable components
-│   ├── pages/         # Page templates
+│   ├── components/     # Your custom components
+│   ├── pages/         # Your pages
 │   └── main.js        # Entry point
 ├── public/
 │   └── styles/        # Static assets
 ├── index.html         # HTML entry
 └── package.json       # Project config
 ```
+
+Core functionality is provided by @micejs/core in node_modules.
 
 ## Available Templates
 

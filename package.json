@@ -1,6 +1,6 @@
 {
-  "name": "@micejs/create-app",
-  "version": "1.0.0",
+  "name": "create-mice-app",
+  "version": "1.0.2",
   "description": "Create mice.js apps with one command",
   "bin": {
     "create-mice-app": "bin/create-mice-app.js",
