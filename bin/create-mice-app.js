@@ -63,7 +63,7 @@ const defaultTemplates = {
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p>&copy; 2024 My App. All rights reserved.</p>
+                <p>&copy; 2025 My App. All rights reserved. Made with love @kudziemuks</p>
             </div>
             <div class="col-md-6 text-md-end">
                 <a href="/about" class="text-light me-3">About</a>
